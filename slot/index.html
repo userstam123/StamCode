@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hacksaw-Style Slot (Simple)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header class="title">Hacksaw-style Slot</header>
+
+    <section class="hud">
+      <div class="balance">Balance: <span id="balance">1000</span> DC</div>
+      <div class="controls">
+        <button id="betDown" class="btn">−</button>
+        <div class="bet">Bet: <span id="bet">10</span> DC</div>
+        <button id="betUp" class="btn">+</button>
+        <label class="toggle">
+          <input type="checkbox" id="turbo" />
+          <span>Turbo</span>
+        </label>
+      </div>
+    </section>
+
+    <section class="machine">
+      <div class="frame glow" id="slotFrame">
+        <div class="grid" id="grid">
+          <div class="row">
+            <div class="cell" data-row="0" data-col="0">🍒</div>
+            <div class="cell" data-row="0" data-col="1">🍋</div>
+            <div class="cell" data-row="0" data-col="2">🔔</div>
+          </div>
+          <div class="row">
+            <div class="cell" data-row="1" data-col="0">⭐</div>
+            <div class="cell" data-row="1" data-col="1">🍀</div>
+            <div class="cell" data-row="1" data-col="2">7️⃣</div>
+          </div>
+          <div class="row">
+            <div class="cell" data-row="2" data-col="0">🍋</div>
+            <div class="cell" data-row="2" data-col="1">🍒</div>
+            <div class="cell" data-row="2" data-col="2">⭐</div>
+          </div>
+        </div>
+        <canvas id="fxCanvas"></canvas>
+        <div id="winBanner" class="win-banner hidden"></div>
+      </div>
+
+      <div class="actions">
+        <button id="spinBtn" class="btn primary">SPIN</button>
+      </div>
+    </section>
+
+    <footer class="footnote">1000 DC default balance · Simple demo</footer>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
